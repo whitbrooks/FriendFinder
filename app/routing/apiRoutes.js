@@ -1,53 +1,60 @@
 // ===============================================================================
-// LOAD DATA
-// Linking routes to friends data source
+// DEPENDENCIES
 // ===============================================================================
 
+var path = require("path");
 var friendsArray = require("../data/friends");
 
 // ===============================================================================
 // ROUTING
 // ===============================================================================
 
+  // export API routes
   module.exports = function(app){
+    
     //a GET route that displays JSON of all possible friends
     app.get('/api/friends', function(req,res){
       res.json(friendsArray);
       console.log(friendsArray);
     });
   
+  // add new friend
     app.post('/api/friends', function(req,res){
-      //grabs the new friend's scores to compare with friends in friendsArray
-      var newFriendScores = req.body.scores;
-      var scoresDifArray = [];
-      var bestMatch = 0;
+      console.log(req.body);
+      var newFriend = req.body
+      var newFriendScores = newFriend.scores;
+      var totalDif = 100;
+      var matchName = "";
+      var matchImage = "";
+ 
   
       //runs through all friends in friendsArray
       for(var i=0; i<friendsArray.length; i++){
         var scoresDif = 0;
         //runs through new friend scores to compare to existing friends
         for(var j=0; j<newFriendScores.length; j++){
-          scoresDif += (Math.abs(parseInt(friendList[i].scores[j]) - parseInt(newFriendScores[j])));
+          scoresDif += (Math.abs(parseInt(friendsArray[i].scores[j]) - parseInt(newFriendScores[j])));
         }
-  
-        //push score differences into scoresDifArray
-        scoresDifArray.push(scoresDif);
-      }
-  
-      //loop through scoresDifArray to find best friend match
-      for(var i=0; i<scoresDifArray.length; i++){
-        if(scoresDifArray[i] <= scoresDifArray[bestMatch]){
-          bestMatch = i;
-        }
-      }
-  
-      //return bestMatch data
-      var newFriend = friendsArray[bestMatch];
-      res.json(newFriend);
-  
-      //pushes new submission into the friendsList array
-      friendList.push(req.body);
-    });
-  };
 
-};
+        //if score difference is lowest, record match
+        if (scoresDif < totalDif) {
+          // console.log('Closest match found = ' + scoresDif);
+          // console.log('Friend name = ' + friendsArray[i].name);
+          // console.log('Friend image = ' + friendsArray[i].photo);
+          
+          totalDif = scoresDif;
+          matchName = friendsArray[i].name;
+          matchImage = friendsArray[i].photo;
+        }
+  
+      }
+    
+
+      //pushes new submission into the friendsList array
+      friendsArray.push(newFriend);
+  
+    // send response
+    res.json({status: 'OK', matchName: matchName, matchImage: matchImage});
+  
+    }); 
+  };

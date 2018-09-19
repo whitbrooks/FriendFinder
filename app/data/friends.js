@@ -15,7 +15,7 @@ var friendsArray = [
             4,
             1
           ]
-      }    
+      },   
       
       {
         "name":"Susie the Seal",
@@ -32,7 +32,7 @@ var friendsArray = [
             4,
             5
           ]
-      } 
+      }, 
 
       {
         "name":"Molly the Mouse",
@@ -49,7 +49,7 @@ var friendsArray = [
             3,
             1
           ]
-      } 
+      }, 
 
       {
         "name":"Carl the Crab",
@@ -66,7 +66,7 @@ var friendsArray = [
             5,
             3
           ]
-      } 
+      }, 
 
       {
         "name":"Kevin the Kangaroo",
@@ -83,7 +83,7 @@ var friendsArray = [
             1,
             1
           ]
-      } 
+      }, 
 
       {
         "name":"Olly the Owl",
@@ -100,7 +100,7 @@ var friendsArray = [
             4,
             2
           ]
-      } 
+      }, 
 
       {
         "name":"Leonard the Lizard",
