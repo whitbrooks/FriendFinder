@@ -2,7 +2,7 @@
 var friendsArray = [
     {
         "name":"Rachel the Rabbit",
-        "photo":"https://www.comedywildlifephoto.com/gallery/2017_winners.php#&gid=1&pid=16",
+        "photo":"https://www.comedywildlifephoto.com/images/gallery/0/00000230_t.jpg",
         "scores":[
             5,
             1,
@@ -19,7 +19,7 @@ var friendsArray = [
       
       {
         "name":"Susie the Seal",
-        "photo":"https://www.comedywildlifephoto.com/gallery/2017_winners.php#&gid=1&pid=17",
+        "photo":"https://www.comedywildlifephoto.com/images/gallery/1/00000231_t.jpg",
         "scores":[
             1,
             1,
@@ -53,7 +53,7 @@ var friendsArray = [
 
       {
         "name":"Carl the Crab",
-        "photo":"https://www.comedywildlifephoto.com/gallery/2017_finalists.php#&gid=1&pid=14",
+        "photo":"https://www.comedywildlifephoto.com/images/gallery/8/00000188_t.jpg",
         "scores":[
             1,
             1,
@@ -70,7 +70,7 @@ var friendsArray = [
 
       {
         "name":"Kevin the Kangaroo",
-        "photo":"https://www.comedywildlifephoto.com/gallery/2017_finalists.php#&gid=1&pid=36",
+        "photo":"https://www.comedywildlifephoto.com/images/gallery/0/00000210_t.jpg",
         "scores":[
             4,
             2,
@@ -87,7 +87,7 @@ var friendsArray = [
 
       {
         "name":"Olly the Owl",
-        "photo":"https://www.comedywildlifephoto.com/gallery/2016_winners.php#&gid=1&pid=5",
+        "photo":"https://www.comedywildlifephoto.com/images/gallery/6/00000156_t.jpg",
         "scores":[
             5,
             1,
@@ -104,7 +104,7 @@ var friendsArray = [
 
       {
         "name":"Leonard the Lizard",
-        "photo":"https://www.comedywildlifephoto.com/gallery/2016_winners.php#&gid=1&pid=15",
+        "photo":"https://www.comedywildlifephoto.com/images/gallery/0/00000150_t.jpg",
         "scores":[
             3,
             1,
